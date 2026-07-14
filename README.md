@@ -33,6 +33,22 @@ brief, research, outline, sample chapter, or edit.
 Weekend Reads defaults to clean Markdown, but it can also prepare versions for
 text-to-speech, EPUB, or audio.
 
+## Download
+
+Want to add it to ChatGPT or Claude without packaging anything yourself?
+
+- [Download `weekend-reads.skill`](https://github.com/onepixelaway/weekend-reads/releases/latest/download/weekend-reads.skill)
+- [Download `weekend-reads.zip`](https://github.com/onepixelaway/weekend-reads/releases/latest/download/weekend-reads.zip)
+
+The two files contain the same skill. `.skill` is Anthropic's packaged-skill
+format; `.zip` is the broadly supported fallback.
+
+> [!IMPORTANT]
+> Pasting the GitHub URL into a Claude chat does **not** install the skill on
+> your account. Claude may copy it into that chat's temporary workspace, but it
+> will not appear in your Skills list or `/` menu. For a durable install, upload
+> one of the files above through **Customize → Skills**.
+
 ## Where it works
 
 Weekend Reads uses the open [Agent Skills
@@ -57,9 +73,10 @@ details.
 
 ### ChatGPT
 
-Open the custom Skill creation or import flow in a workspace with Skills
-enabled, then provide this folder or its ZIP archive. The included
-`agents/openai.yaml` gives ChatGPT the display name and starter prompt.
+Download [`weekend-reads.zip`](https://github.com/onepixelaway/weekend-reads/releases/latest/download/weekend-reads.zip),
+then open the custom Skill creation or import flow in a workspace with Skills
+enabled and upload it. The included `agents/openai.yaml` gives ChatGPT the
+display name and starter prompt.
 
 ### Codex
 
@@ -80,17 +97,18 @@ Codex should find it automatically. If it does not show up, restart Codex.
 
 ### Claude and Claude Cowork
 
-Clone the repo and zip the skill folder:
+1. Download [`weekend-reads.skill`](https://github.com/onepixelaway/weekend-reads/releases/latest/download/weekend-reads.skill).
+2. In Claude, open **Customize → Skills**.
+3. Choose **Create skill → Upload a skill** and select the downloaded file.
+4. Make sure Weekend Reads is enabled.
 
-```bash
-git clone https://github.com/onepixelaway/weekend-reads.git
-zip -r weekend-reads.zip weekend-reads \
-  -x 'weekend-reads/.git/*' 'weekend-reads/.DS_Store'
-```
+If your file picker only accepts ZIP files, use
+[`weekend-reads.zip`](https://github.com/onepixelaway/weekend-reads/releases/latest/download/weekend-reads.zip)
+instead. It contains the same files in the same layout.
 
-In Claude, open **Customize → Skills**, add a skill, and upload
-`weekend-reads.zip`. Once it is enabled, you can use it in Claude and Cowork
-where your plan supports Skills.
+Once the upload is registered on your account, Weekend Reads is available in
+future chats and in Cowork where your plan supports Skills. If an already-open
+chat does not refresh its skill list, start a new one.
 
 ### Claude Code
 
@@ -127,6 +145,18 @@ personal archives. Stop after the outline so I can choose the direction.
 The skill asks for the missing bits without handing you a giant questionnaire.
 It also knows when to stop, so asking for an outline will not mysteriously turn
 into ten thousand words of surprise homework.
+
+## Build the upload files
+
+If you are working from a clone or fork, rebuild both distributable files with:
+
+```bash
+python3 scripts/package_skill.py
+```
+
+The command writes `dist/weekend-reads.skill` and
+`dist/weekend-reads.zip`. It packages only the files the skill needs at runtime,
+with the required `weekend-reads/` folder at the archive root.
 
 ## What's in the box
 
