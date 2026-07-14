@@ -2,88 +2,85 @@
 
 ![An open book becoming a quiet landscape](assets/headers/weekend-reads-banner.webp)
 
-Weekend Reads is an open Agent Skill for creating an absorbing, deeply
-researched guide of roughly 10,000 words: something substantial enough to teach
-a subject properly, but paced and written to be enjoyed over a weekend.
+**Turn a big question into a great 10,000-word read.**
 
-Instead of responding to a broad topic with one very long first draft, the skill
-walks the writer through the decisions that make long-form work succeed. It
-frames the reader's journey, chooses the right balance of research and
-first-principles reasoning, compares several possible structures, builds and
-pressure-tests an outline, establishes the voice, drafts in controlled passes,
-and finishes with structural, evidentiary, and line-level revision.
+Some topics deserve more than a thread and less than a book. Weekend Reads is
+an Agent Skill that helps you explore one of those topics properly, then turn
+what you find into something people will actually enjoy reading.
 
-## What it does
+Bring a subject, a half-formed idea, or a question you cannot stop thinking
+about. Weekend Reads helps you find the real story, choose a shape for it,
+research it carefully, and write it one chapter at a time. The usual destination
+is an 8,000–12,000-word guide: deep enough to be useful, relaxed enough for a
+Saturday afternoon.
 
-- Turns a topic into a clear reader promise and governing question.
-- Targets an 8,000–12,000-word guide while narrowing subjects that cannot be
-  handled honestly at that length.
-- Chooses between research-led, reasoning-led, and blended approaches.
-- Offers three meaningfully different structures before committing to an
-  outline.
-- Builds a six-to-nine-chapter reading arc with chapter contracts and word
-  budgets.
-- Maintains a source ledger and evidence map for factual work.
-- Calibrates a composed, documentary voice before drafting.
-- Drafts chapter by chapter and preserves user approval points.
-- Checks source integrity, pacing, privacy, readability, and common AI-writing
-  habits before delivery.
-- Supports clean Markdown, text-to-speech, EPUB, and pure-audio variants.
+## How it works
 
-The skill can help with the complete process or stop after framing, research,
-outlining, a sample chapter, or revision.
+1. **Find the real question.** A broad topic becomes a clear promise to the
+   reader.
+2. **Pick a route.** The guide can lean on reporting, first-principles thinking,
+   or a useful mix of both.
+3. **Make a map.** Weekend Reads suggests three different structures, recommends
+   one, and builds the chosen route into a chapter-by-chapter outline.
+4. **Write without rushing.** It sets the voice, drafts in manageable passes,
+   and keeps the outline from quietly wandering off.
+5. **Give it a proper edit.** Facts get checked, repetition gets cut, and stiff
+   or suspiciously AI-sounding prose gets another pass.
 
-## Supported platforms
+You stay in control along the way. Ask for the whole guide, or stop after the
+brief, research, outline, sample chapter, or edit.
 
-Weekend Reads follows the open [Agent Skills
-specification](https://agentskills.io/specification) and uses a portable
-`SKILL.md` with progressively loaded references.
+Weekend Reads defaults to clean Markdown, but it can also prepare versions for
+text-to-speech, EPUB, or audio.
 
-| Platform | Support | Invocation |
-| --- | --- | --- |
-| ChatGPT | Custom and workspace Skills | Select or mention **Weekend Reads**, then describe the guide. |
-| Codex app, CLI, and IDE extension | Filesystem Skills | Invoke `$weekend-reads` or make a matching request. |
-| Claude | Custom Skills | Enable the skill and ask naturally or select it explicitly. |
-| Claude Cowork | Custom Skills shared with Claude | Use the enabled skill in a Cowork task. |
-| Claude Code | Filesystem Skills | Invoke `/weekend-reads` or make a matching request. |
+## Where it works
 
-Platform availability can depend on plan, workspace settings, and whether
-Skills or code execution are enabled. See the official guides for [OpenAI
-Skills](https://learn.chatgpt.com/docs/build-skills), [Claude
+Weekend Reads uses the open [Agent Skills
+format](https://agentskills.io/specification), so the same folder works across
+the major AI writing tools.
+
+| Platform | How to start |
+| --- | --- |
+| ChatGPT | Select or mention **Weekend Reads**, then tell it what you want to explore. |
+| Codex app, CLI, and IDE extension | Invoke `$weekend-reads`, or simply ask for a deep guide. |
+| Claude | Enable the skill and ask naturally. |
+| Claude Cowork | Use the enabled skill in a Cowork task. |
+| Claude Code | Invoke `/weekend-reads`, or ask for a matching task. |
+
+Availability can vary by plan and workspace settings. The official setup guides
+for [OpenAI Skills](https://learn.chatgpt.com/docs/build-skills), [Claude
 Skills](https://support.claude.com/en/articles/12512180-use-skills-in-claude),
-and [Claude Code Skills](https://code.claude.com/docs/en/skills).
+and [Claude Code Skills](https://code.claude.com/docs/en/skills) have the latest
+details.
 
-## Install
+## Install it
 
 ### ChatGPT
 
-Use the custom Skill creation or import flow in a ChatGPT workspace with Skills
-enabled, and provide this skill folder or its ZIP archive when prompted. The
-included `agents/openai.yaml` supplies the OpenAI display name, description,
-and starter prompt.
+Open the custom Skill creation or import flow in a workspace with Skills
+enabled, then provide this folder or its ZIP archive. The included
+`agents/openai.yaml` gives ChatGPT the display name and starter prompt.
 
 ### Codex
 
-Install for your user account:
+Install it for your user account:
 
 ```bash
 git clone https://github.com/onepixelaway/weekend-reads.git \
   ~/.agents/skills/weekend-reads
 ```
 
-For one repository, clone or copy it to:
+Or add it to one repository:
 
 ```text
 <repository>/.agents/skills/weekend-reads/
 ```
 
-Codex discovers `SKILL.md` automatically. If it does not appear immediately,
-restart Codex.
+Codex should find it automatically. If it does not show up, restart Codex.
 
 ### Claude and Claude Cowork
 
-Clone the repository and create an uploadable ZIP whose root is the
-`weekend-reads` folder:
+Clone the repo and zip the skill folder:
 
 ```bash
 git clone https://github.com/onepixelaway/weekend-reads.git
@@ -91,46 +88,47 @@ zip -r weekend-reads.zip weekend-reads \
   -x 'weekend-reads/.git/*' 'weekend-reads/.DS_Store'
 ```
 
-In Claude, open **Customize → Skills**, create or add a skill, and upload
-`weekend-reads.zip`. Once enabled, the skill is also available in Cowork where
-your plan and workspace settings support Skills.
+In Claude, open **Customize → Skills**, add a skill, and upload
+`weekend-reads.zip`. Once it is enabled, you can use it in Claude and Cowork
+where your plan supports Skills.
 
 ### Claude Code
 
-Install for all projects:
+Install it for all your projects:
 
 ```bash
 git clone https://github.com/onepixelaway/weekend-reads.git \
   ~/.claude/skills/weekend-reads
 ```
 
-For one project, clone or copy it to:
+Or add it to one project:
 
 ```text
 <project>/.claude/skills/weekend-reads/
 ```
 
-## Use it
+## Give it a spin
 
-Start with as much or as little context as you have:
+You do not need a perfect brief. Start messy:
 
 ```text
 Use Weekend Reads to help me write a deep guide to how cities manage water.
-It should be useful to a curious general reader and grounded in current
-research. Start by helping me frame the real question.
+It is for curious general readers, and I want it grounded in current research.
+Help me find the real question first.
 ```
 
-Or ask for a specific phase:
+Or jump straight to one part of the process:
 
 ```text
-Use Weekend Reads to propose three structures for a 10,000-word guide to
-personal archives. Do not draft the guide yet.
+Use Weekend Reads to suggest three ways to structure a 10,000-word guide to
+personal archives. Stop after the outline so I can choose the direction.
 ```
 
-The skill asks only for missing, high-leverage information. It will not bury a
-useful outline beneath a premature long draft.
+The skill asks for the missing bits without handing you a giant questionnaire.
+It also knows when to stop, so asking for an outline will not mysteriously turn
+into ten thousand words of surprise homework.
 
-## Structure
+## What's in the box
 
 ```text
 weekend-reads/
@@ -144,5 +142,5 @@ weekend-reads/
     └── voice-and-style.md
 ```
 
-The main skill stays compact. It loads the research, outlining, voice, and
-quality references only when the relevant phase requires them.
+`SKILL.md` holds the main workflow. The extra guides come off the shelf only
+when they are useful, keeping the skill light on its feet.
