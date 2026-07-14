@@ -1,5 +1,7 @@
 # Weekend Reads
 
+![An open book becoming a quiet landscape](assets/headers/weekend-reads-banner.webp)
+
 Weekend Reads is an open Agent Skill for creating an absorbing, deeply
 researched guide of roughly 10,000 words: something substantial enough to teach
 a subject properly, but paced and written to be enjoyed over a weekend.
