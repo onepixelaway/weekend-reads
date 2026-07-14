@@ -1,0 +1,4 @@
+interface:
+  display_name: "Weekend Reads"
+  short_description: "Build an absorbing 10,000-word deep guide"
+  default_prompt: "Use $weekend-reads to help me shape and write an absorbing deep guide for a weekend read."
