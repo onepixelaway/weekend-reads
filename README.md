@@ -24,8 +24,8 @@ Saturday afternoon.
    one, and builds the chosen route into a chapter-by-chapter outline.
 4. **Write without rushing.** It sets the voice, drafts in manageable passes,
    and keeps the outline from quietly wandering off.
-5. **Give it a proper edit.** Facts get checked, repetition gets cut, and stiff
-   or suspiciously AI-sounding prose gets another pass.
+5. **Give it a proper edit.** Facts get checked, repetition gets cut, and stiff,
+   needlessly formal, or suspiciously AI-sounding prose gets another pass.
 
 You stay in control along the way. Ask for the whole guide, or stop after the
 brief, research, outline, sample chapter, or edit.

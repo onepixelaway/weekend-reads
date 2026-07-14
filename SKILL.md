@@ -18,6 +18,7 @@ Produce a guide that:
 - has a clear reader promise and a deliberate beginning, middle, and landing;
 - earns authority through research, reasoning, or a declared blend of both;
 - remains pleasurable to read through concrete detail, variation, and momentum;
+- uses familiar words whenever they are as accurate as more formal ones;
 - contains no invented facts, scenes, quotations, statistics, or sources.
 
 ## Run the workflow
@@ -133,7 +134,9 @@ Revise in this order:
 2. **Evidentiary:** Verify claims and citations. Represent disagreement fairly.
    Remove details that are merely plausible.
 3. **Line-level:** Improve clarity, rhythm, transitions, headings, and concrete
-   language. Remove AI-writing tics and administrative signposting.
+   language. Run a plain-language pass that replaces needlessly formal words
+   with familiar ones while keeping necessary technical terms accurate. Remove
+   AI-writing tics and administrative signposting.
 
 Run `references/quality-checklist.md` before delivery and fix what it finds.
 

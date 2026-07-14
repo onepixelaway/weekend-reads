@@ -65,12 +65,34 @@ Mix sentence and paragraph lengths according to the thought. Let a short
 sentence carry a real turn. Avoid using fragments, one-line paragraphs, or
 parallel clauses as a repeated dramatic device.
 
-## Prefer plain, exact language
+## Prefer familiar, exact language
 
-Choose the concrete word. Prefer “the people involved” to “stakeholders” when
-that is what is meant, “where things stand” to “shared state,” and “how it
-moves” to “dynamics.” Keep a technical term when it is load-bearing, define it
-on first use, and use it consistently afterward.
+Use the most familiar word that keeps the meaning. Do not choose a formal,
+academic, technical, or business word merely because it sounds more precise.
+If a reader could understand the same idea faster with an everyday word or a
+short plain phrase, use it.
+
+Choose the replacement from the sentence's actual meaning rather than making a
+blind word swap. For example:
+
+- use “use” instead of “utilize”;
+- replace “lever” with “tool,” “advantage,” “control,” or “way to change it,”
+  depending on what the sentence means;
+- use “written version” or “turning speech into text” instead of
+  “transcription” when the name of the technical process does not matter;
+- prefer “the people involved” to “stakeholders,” “where things stand” to
+  “shared state,” and “how it moves” to “dynamics” when those phrases are
+  accurate.
+
+Keep a specialized term when it carries meaning that a simpler phrase would
+lose. Explain it in ordinary language on first use, preferably in the same
+sentence, then use it consistently. Simple language must not make the idea
+vague, childish, or wrong.
+
+During revision, read for vocabulary separately from rhythm. Ask of each
+sentence: could a curious non-specialist understand this on the first pass
+without stopping over a word? Rewrite when the answer is no and the difficult
+word is not necessary.
 
 Identify a person, institution, place, or specialized tool on first mention.
 Give only the context the reader needs, then use the short name.

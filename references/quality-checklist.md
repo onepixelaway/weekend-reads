@@ -45,13 +45,19 @@ finds; do not merely report them.
   calibration paragraph.
 - Remove blog cadence, self-help language, academic fog, sales language, and
   generic AI phrasing.
-- Replace vague abstractions with plain, exact words.
+- Run a separate vocabulary pass. Replace a formal or specialist word when a
+  familiar word or short plain phrase would keep the full meaning.
+- Check words such as “lever” and “transcription” in context. Keep them when the
+  exact concept matters; otherwise use the clearer everyday wording.
+- Replace vague abstractions with familiar, exact words.
 - Identify people, institutions, tools, and specialized terms on first mention.
+- Explain every necessary specialist term in ordinary language on first use.
 - Cut throat-clearing, filler intensifiers, hollow importance claims, and
   administrative previews.
 - Break the reflexive use of em dashes, false antitheses, three-item lists,
   “from X to Y,” and repeated one-line dramatic paragraphs.
-- Read representative pages aloud and repair sentences that are hard to parse.
+- Read representative pages aloud and repair sentences that are hard to parse
+  or require a non-specialist to stop over an unnecessary word.
 
 ## 5. Useful automated scans
 
@@ -70,6 +76,13 @@ Find repeated machine-prose patterns:
 ```bash
 rg -ni "it'?s not .{1,100},? it'?s|it is not .{1,100},? it is|it'?s worth noting|at the end of the day|in today'?s world|\b(genuinely|truly|incredibly|really|simply)\b|from .{1,80} to .{1,80}" "$FILE"
 rg -n '—' "$FILE"
+```
+
+Prompt a contextual review of words that are often needlessly formal. Do not
+replace matches automatically:
+
+```bash
+rg -ni "\b(utilize|lever(age)?|facilitate|stakeholders?|transcription|paradigm|methodology)\b" "$FILE"
 ```
 
 Find administrative signposting:
